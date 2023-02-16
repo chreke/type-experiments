@@ -2,7 +2,7 @@
 const tokenize = (program) => {
   const comment = /\/\/.*/
   const string = /"(?:\\.|[^\\"])*"?/;
-  const operators = /[.+*-]/
+  const operators = /[<>!=.+*-]/
   const delimiters = /[()\[\]{}]/
   const identifier = /\w+/
   const regexp = new RegExp(
@@ -24,4 +24,8 @@ const tokenize = (program) => {
   return matches;
 }
 
-export {tokenize}
+const parse = (tokens) => {
+  
+}
+
+export {tokenize, parse}
